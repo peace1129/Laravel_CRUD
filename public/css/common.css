@@ -1,0 +1,42 @@
+/* ページタイトル装飾 */
+h1 {
+  border-bottom: solid 3px #c0c0c0;
+}
+
+/* select要素のサイズをinput textへ一致させる */
+select { 
+  height: 30px; 
+  line-height: 20px;
+}
+
+/* navbar スマホレスポンシブ */
+  .response-navbar-table {
+    display: table;
+    table-layout: fixed;
+    text-align: center;
+    width: calc(100% - navbar-brandの横幅);
+  }
+  .response-navbar-table > li {
+    float: none !important;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+/* table スマホレスポンシブ */
+@media screen and (max-width: 767px) {
+    .response-table thead {
+      display: none;
+    }
+    .response-table .response-table_tr {
+      display: block;
+    }
+    .response-table .response-table_td {
+      display: block;
+      text-align: right;
+    }
+    .response-table .response-table_td:before {
+        float: left;
+        content: attr(aria-label);
+      
+    }
+  }
